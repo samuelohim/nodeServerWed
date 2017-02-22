@@ -1,0 +1,23 @@
+npm init		// creates package.json
+
+	entry point: server.js
+
+npm install --save express		// save express into package.json
+
+open folder with sublime
+
+create a new file: server.js:
+
+const express = require('express');
+
+app = express(),
+
+port = process.env.PORT || 8080;
+
+app.get('/', ('req', 'res') => {
+	res.sent('Hi from express');
+});
+
+app.listen(port, ()=>{
+	console.log(`Listening on port ${port}`);
+});
